@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 5.0.100-preview.1
     - name: Install dependencies
-      run: dotnet restore ~src/
+      run: dotnet restore ~\corewf\src\System.Activities.sln
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
