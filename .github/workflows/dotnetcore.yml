@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 5.0.100-preview.1
     - name: Configure solution file
-      run: echo "set-env solution_path::'.\src\System.Activities.sln'"
+      run: echo ::set-env solution_path='.\src\System.Activities.sln'
     - name: Install dependencies
       run: dotnet restore ${solution_path}
     - name: Build
