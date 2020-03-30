@@ -17,11 +17,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.100-preview.1
-    - name: Environment
-      run: echo {$GITHUB_WORKSPACE}
     - name: Install dependencies
       run: dotnet restore ".\src\System.Activities.sln"
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build  ".\src\System.Activities.sln" --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
