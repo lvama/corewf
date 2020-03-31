@@ -10,13 +10,17 @@
     <Version>1.2.0</Version>
     <RootNamespace>System.Activities.EtwTracking</RootNamespace>
     <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>LV.System.Activities.EtwTracking</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
   <PropertyGroup Condition="'$(OfficialBuild)'=='true'">
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\CoreWF.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <ProjectReference Include="..\CoreWf\System.Activities.csproj" />
   </ItemGroup>
 </Project>

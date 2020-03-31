@@ -11,6 +11,9 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageProjectUrl>https://github.com/UiPath/CoreWf</PackageProjectUrl>
     <NoWarn>$(NoWarn);NU5105</NoWarn>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <Version>1.2.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\CoreWf\System.Activities.csproj" />
