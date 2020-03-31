@@ -1,0 +1,24 @@
+name: .NET Core
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+        SOLUTION_PATH: '.\src\System.Activities.sln'
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.100-preview.1
+    - name: Install dependencies
+      run: dotnet restore '${{env.SOLUTION_PATH}}'
+    - name: Build
+      run: dotnet build  '${{env.SOLUTION_PATH}}' --configuration Release --no-restore
+    - name: Test
+      run: dotnet test '${{env.SOLUTION_PATH}}' --no-restore --verbosity normal
